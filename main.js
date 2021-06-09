@@ -1,6 +1,4 @@
 const numberLeft = document.querySelector(".number");
-// const numberUsed = document.querySelector(".numberUsed");
-
 const range = document.querySelector(".range");
 const numberUsed = document.querySelector(".numberUsed");
 

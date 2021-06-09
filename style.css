@@ -52,7 +52,6 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   line-height: 1.6;
-  position: relative;
 }
 
 h1,
@@ -63,10 +62,6 @@ p {
 h1 {
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
-}
-
-a {
-  text-decoration: none;
 }
 
 img {
@@ -197,6 +192,7 @@ img {
   font-size: 2.5rem;
 }
 
+/* --**input*-- */
 .range {
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, to(#0c122c));
@@ -220,11 +216,11 @@ img {
   font-weight: var(--font-bold);
 }
 
-.bubble {
-  color: white;
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: transparent;
 }
 
-/** FF*/
 input[type="range"]::-moz-range-track {
   background-color: #0c122c;
 }
