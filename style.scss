@@ -86,7 +86,7 @@ img {
 
 /* --**CSS CLASS**-- */
 .section {
-    padding: 2rem 0 4rem;
+    padding: 2rem;
     &__title {
         font-size: var(--h1-font-size);
     }
@@ -104,9 +104,11 @@ img {
 /* --**LAYOUT**-- */
 
 .container {
+    justify-content: center;
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid white;
 }
 .grid {
     display: grid;
@@ -116,4 +118,43 @@ img {
     height: 100vh;
     width: 100%;
     background-color: hsl(229, 57%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* --**CONTENT**-- */
+.content {
+    width: 100vw;
+    // border: 1px solid red;
+}
+
+/* --**first-data*-- */
+.first-data__content {
+    max-width: 300px;
+    height: 225px;
+    // border-top-right-radius: 5rem;
+    border-radius: 1rem 5rem 1rem 1rem;
+    background-color: var(--bgContent-color);
+}
+.logo {
+    margin: var(--mb-4) 0;
+}
+.icon {
+    background-color: var(--bgIcon-color);
+    padding: 1rem;
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+    border-radius: 0.7rem;
+}
+.first-data__logo,
+.first-data__images {
+    padding: 0.5rem 2rem;
+}
+/* --**second-data*-- */
+.second-data__content {
+    max-width: 300px;
+    min-height: 150px;
+    border-radius: 1rem;
+    background-color: var(--bgContent-color);
 }
