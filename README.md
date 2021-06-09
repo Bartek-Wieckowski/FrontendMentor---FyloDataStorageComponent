@@ -1,4 +1,4 @@
-# My own design for a fast and responsive website
+# Another project!
 
 ![Design preview ](/images/screenREADME.png)
 
