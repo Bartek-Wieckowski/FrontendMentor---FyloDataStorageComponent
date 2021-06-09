@@ -18,3 +18,14 @@ function setBubble(range, numberUsed) {
   const calcLeft = Number(range.max - range.value);
   numberLeft.innerHTML = calcLeft;
 }
+
+// color range
+document.querySelector(".range").oninput = function () {
+  const value = ((this.value - this.min) / (this.max - this.min)) * 100;
+  this.style.background =
+    "linear-gradient(to right, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) " +
+    value +
+    "%, hsl(229, 57%, 11%) " +
+    value +
+    "%, hsl(229, 57%, 11%) 100%)";
+};

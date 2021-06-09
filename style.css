@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 /* --**VARIABLES CSS**-- */
 :root {
-  --gradient-color: (hsl(6, 100%, 80%) to hsl(335, 100%, 65%));
   --first-color: hsl(243, 100%, 93%);
   --tooltip-color: hsl(229, 7%, 55%);
   --bgContent-color: hsl(228, 56%, 26%);
@@ -85,16 +84,6 @@ img {
   color: var(--first-color);
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-2);
-}
-
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-3);
-}
-
-.section__title,
-.section__subtitle {
   text-align: center;
 }
 
@@ -137,7 +126,7 @@ img {
 /* --**first-data*-- */
 .first-data__content {
   max-width: 325px;
-  height: 225px;
+  min-height: 225px;
   border-radius: 1rem 5rem 1rem 1rem;
   background-color: var(--bgContent-color);
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 50px;
@@ -157,6 +146,11 @@ img {
   border-radius: 0.7rem;
 }
 
+.icon:hover {
+  background-color: var(--first-color);
+  cursor: pointer;
+}
+
 .first-data__logo,
 .first-data__images {
   padding: 0.5rem 2rem;
@@ -165,7 +159,7 @@ img {
 /* --**second-data*-- */
 .second-data__content {
   max-width: 325px;
-  height: 155px;
+  min-height: 175px;
   border-radius: 1rem;
   background-color: var(--bgContent-color);
   position: relative;
@@ -204,7 +198,44 @@ img {
 }
 
 .range {
-  width: 80%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, to(#0c122c));
+  background: linear-gradient(#0c122c 100%);
+  border-radius: 8px;
+  height: 15px;
+  outline: none;
+  -webkit-transition: background 450ms ease-in;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.min-max {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--first-color);
+  font-weight: var(--font-bold);
+}
+
+.bubble {
+  color: white;
+}
+
+/** FF*/
+input[type="range"]::-moz-range-track {
+  background-color: #0c122c;
+}
+
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #ffa399;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background-color: #ff4d97;
 }
 
 @media screen and (min-width: 768px) {
@@ -221,6 +252,7 @@ img {
   .second-data__content {
     max-width: unset;
     width: 700px;
+    min-height: 155px;
     -ms-flex-item-align: end;
         align-self: flex-end;
   }
@@ -229,22 +261,13 @@ img {
     min-height: 100px;
     border-radius: 0.4rem;
     position: absolute;
-    top: -45px;
+    top: -70px;
     left: 355px;
     -webkit-clip-path: polygon(53% 0, 100% 0, 100% 59%, 100% 100%, 81% 68%, 50% 68%, 21% 68%, 0 68%, 0 35%, 0 0);
             clip-path: polygon(53% 0, 100% 0, 100% 59%, 100% 100%, 81% 68%, 50% 68%, 21% 68%, 0 68%, 0 35%, 0 0);
     padding: unset;
     font-size: 0.7rem;
     font-weight: var(--font-bold);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    text-align: right;
   }
   .number {
     position: absolute;
