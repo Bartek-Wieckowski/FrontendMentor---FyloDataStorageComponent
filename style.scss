@@ -3,7 +3,7 @@
 /* --**VARIABLES CSS**-- */
 :root {
     // colors
-    --gradient-color: linear-gradient(hsl(6, 100%, 80%) to hsl(335, 100%, 65%));
+    --gradient-color: (hsl(6, 100%, 80%) to hsl(335, 100%, 65%));
     --first-color: hsl(243, 100%, 93%);
     --tooltip-color: hsl(229, 7%, 55%);
     --bgContent-color: hsl(228, 56%, 26%);
@@ -88,7 +88,10 @@ img {
 .section {
     padding: 2rem;
     &__title {
-        font-size: var(--h1-font-size);
+        font-size: var(--normal-font-size);
+        color: var(--first-color);
+        margin-top: var(--mb-2);
+        margin-bottom: var(--mb-2);
     }
     &__subtitle {
         display: block;
@@ -130,9 +133,8 @@ img {
 
 /* --**first-data*-- */
 .first-data__content {
-    max-width: 300px;
+    max-width: 325px;
     height: 225px;
-    // border-top-right-radius: 5rem;
     border-radius: 1rem 5rem 1rem 1rem;
     background-color: var(--bgContent-color);
 }
@@ -153,8 +155,35 @@ img {
 }
 /* --**second-data*-- */
 .second-data__content {
-    max-width: 300px;
-    min-height: 150px;
+    max-width: 325px;
+    height: 155px;
     border-radius: 1rem;
     background-color: var(--bgContent-color);
+    position: relative;
+    padding: 0.5rem 2rem;
+}
+.section__tooltip {
+    background-color: var(--first-color);
+    color: var(--tooltip-color);
+    min-width: 145px;
+    height: 65px;
+    border-radius: 0.4rem;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    font-size: 0.7rem;
+    font-weight: var(--font-bold);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.number {
+    color: var(--bgIcon-color);
+    font-size: 2.5rem;
+    text-align: center;
+}
+.range {
+    width: 100%;
 }
