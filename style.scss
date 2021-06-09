@@ -2,8 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 /* --**VARIABLES CSS**-- */
 :root {
-    --header-height: 3rem;
-
     // colors
     --gradient-color: linear-gradient(hsl(6, 100%, 80%) to hsl(335, 100%, 65%));
     --first-color: hsl(243, 100%, 93%);
@@ -64,27 +62,19 @@ body {
     margin: 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    // background-color: var(--body-color);
-    // color: var(--text-color);
+
     line-height: 1.6;
+    position: relative;
 }
 h1,
-h2,
-h3,
-ul,
 p {
     margin: 0;
 }
-h1,
-h2,
-h3 {
+h1 {
     font-weight: var(--font-semi-bold);
     color: var(--title-color);
 }
-ul {
-    padding: 0;
-    list-style: none;
-}
+
 a {
     text-decoration: none;
 }
@@ -112,24 +102,18 @@ img {
 }
 
 /* --**LAYOUT**-- */
+
 .container {
-    max-width: 768px;
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .grid {
     display: grid;
     gap: 1.5rem;
 }
-
-/* --**NAV**-- */
-
-/* --**Show Menu*-- */
-
-/* --**HOME**-- */
-
-/* --**BUTTONS**-- */
-
-/* --**FOOTER**-- */
-
-/* --**MEDIA QUERIES**-- */
+.main {
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(229, 57%, 11%);
+}
