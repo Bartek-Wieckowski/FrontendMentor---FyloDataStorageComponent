@@ -1,6 +1,6 @@
 # My own design for a fast and responsive website
 
-![Design preview ](/img/screenREADME.png)
+![Design preview ](/images/screenREADME.png)
 
 ## Welcome! 👋
 
